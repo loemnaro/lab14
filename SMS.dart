@@ -1,6 +1,5 @@
 import 'dart:io';
 
-// Student class
 class Student {
   int id;
   String name;
@@ -19,7 +18,7 @@ class Student {
     return 'ID: $id, Name: $name, Age: $age, Grade: $grade';
   }
 
-  // Override equality for Set
+
   @override
   bool operator ==(Object other) =>
       identical(this, other) ||
@@ -29,7 +28,6 @@ class Student {
   int get hashCode => id.hashCode;
 }
 
-// Main function
 void main() {
   int storageOption;
 
@@ -62,9 +60,6 @@ void main() {
   } while (storageOption != 0);
 }
 
-//////////////////////////
-// List Storage Version //
-//////////////////////////
 void studentMenuList() {
   List<Student> students = [];
   int option;
@@ -144,9 +139,7 @@ void deleteStudentList(List<Student> students) {
   print("Student deleted successfully.");
 }
 
-/////////////////////////
-// Set Storage Version //
-/////////////////////////
+
 void studentMenuSet() {
   Set<Student> students = {};
   int option;
@@ -198,9 +191,9 @@ void updateStudentSet(Set<Student> students) {
     print("Student not found.");
     return;
   }
-  students.remove(student); // remove old
-  Student updated = createStudent(); // create new
-  students.add(updated); // add updated
+  students.remove(student); 
+  Student updated = createStudent(); 
+  students.add(updated);
   print("Student updated successfully.");
 }
 
@@ -211,9 +204,7 @@ void deleteStudentSet(Set<Student> students) {
   print("Student deleted successfully.");
 }
 
-/////////////////////////
-// Map Storage Version //
-/////////////////////////
+
 void studentMenuMap() {
   Map<int, Student> students = {};
   int option;
